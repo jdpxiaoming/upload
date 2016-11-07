@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var todos = require('./routes/todos');
 var AV = require('leanengine');
+var weather = require('./weather');
 
 var app = express();
 
@@ -28,6 +29,46 @@ app.use(cookieParser());
 
 app.get('/', function(req, res) {
   res.render('index', { currentTime: new Date() });
+});
+
+app.get('/getWeather',function(req,res){
+  // var ip = URL.parse(req.url, true).query.ip;
+  // 	if(ip){	//有参数请求
+  var ip = ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress;
+  		weather.getIpInfo(ip, function(cityinfo){
+  			var cityid = weather.getCityId(cityinfo[0], cityinfo[1]);
+  			weather.getWeatherInfo(cityid, function(weatherinfo){
+  				res.writeHead(200, {"Content-Type": "text/html;charset:utf-8"});
+  				res.write(JSON.stringify(weatherinfo));
+  				res.end();
+  			});
+  		});
+  	// }else{	//无参数请求
+  	// 	ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress;
+  	// 	weather.getIpInfo(ip, function(cityinforeq
+  	// 		var cityid = weather.getCityId(cityinfo[0], cityinfo[1]);
+  	// 		weather.getWeatherInfo(cityid, function(weatherinfo){
+  	// 			var weatherinfo = weatherinfo.weatherinfo;
+  	// 			var html = "<html>" +
+    //                                          "<head>" +　
+  	// 			           "<meta charset='utf-8'/>" +
+    //   					   "<title>天气</title>" +
+  	// 				   "<style>*{font-family: arial, helvetica, sans-serif; font-size: 12px; color: rgb(153, 153, 153);}</style>" +
+  	// 				   "</head>" +
+  	// 				   "<body>" +
+  	// 				   weatherinfo.city + ": " +
+  	// 				   weatherinfo.temp2 + "~" + weatherinfo.temp1 + " " +
+  	// 				   weatherinfo.weather +
+  	// 				   " (更新时间: " + weatherinfo.ptime + ")" +
+  	// 				   "</body>" +
+  	// 				   "</html>";
+  	// 			res.writeHead(200, {"Content-Type": "text/html"});
+  	// 			res.write(html);
+  	// 			res.end();
+  	// 		});
+  	// 	});
+  	// }
+      console.log(ip);
 });
 
 // 可以将一类的路由单独保存在一个文件中
