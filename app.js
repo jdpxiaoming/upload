@@ -36,7 +36,7 @@ app.get('/getWeather',function(req,res){
   // 	if(ip){	//有参数请求
   var ip = ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress;
   		weather.getIpInfo(ip, function(cityinfo){
-  			var cityid = weather.getCityId(cityinfo[0], cityinfo[1]);
+  			var cityid = '101190401';//weather.getCityId(cityinfo[0], cityinfo[1]);
   			weather.getWeatherInfo(cityid, function(weatherinfo){
   				res.writeHead(200, {"Content-Type": "text/html;charset:utf-8"});
   				res.write(JSON.stringify(weatherinfo));
