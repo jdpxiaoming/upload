@@ -3,13 +3,11 @@
 ## 数据库结构
 * 单品
 
-
 |图片|分类|颜色|标签|季节|收纳位置|价格|Create At|
 |---|----|---|---|----|------|----|--------|
 |file|上衣|黄色|小清新/萝莉|春秋|主卧-上衣柜|50|2016/11/10|
 
 * 套装
-
 
 |上衣(单品ｉｄ)|   裤子    　|评分     |全身图片|温度|季节|
 |------------|------------|--------|-------|----|-------|
@@ -31,15 +29,11 @@
 
 * 图片()
 
-|objectId|mime_Type|url|
-|--------|---------|---|
-|581aa0d7128fe10055aca746|application/octet-stream|http://ac-6FyQ37RB.clouddn.com/C0SLWDDrehRUueFvUkIjvF3WOosEWdWXPIzhwOSW|
-
 * 品牌(衣服品牌分类)
 
-|id|名称|type|website|
-|--|----|----|------|
-|1|Jack&Johnse|1|http://xx1.jpg|
+|id |名称        |type |website |
+|---|-----------|-----|---------|
+|1  |Jack&Johnse|1|http://xx1.jpg|
 |2|Only|2|http://xx2.jpg|
 |3|JUGG|3|http://xx3.jpg|
 |4|Addidas|４|http://xx４.jpg|
