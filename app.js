@@ -35,13 +35,20 @@ app.get('/', function(req, res) {
     });
 });
 
+/**
+* @type 查询类型　base 实时　all 一周天气预测
+**/
 app.get('/getWeather', function(req, res) {
     // var ip = URL.parse(req.url, true).query.ip;
     // 	if(ip){	//有参数请求
     var ip = ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress;
+    var type = req.query.type;
+    if(!type){
+      type='base';
+    };
     weather.getIpInfo(ip, function(cityinfo) {
         var cityid = '320500'; //weather.getCityId(cityinfo[0], cityinfo[1]);
-        weather.getWeatherInfo(cityid, function(weatherinfo) {
+        weather.getWeatherInfo(cityid, type, function(weatherinfo) {
             res.writeHead(200, {
                 "Content-Type": "text/html;charset:utf-8"
             });
@@ -49,31 +56,6 @@ app.get('/getWeather', function(req, res) {
             res.end();
         });
     });
-    // }else{	//无参数请求
-    // 	ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress;
-    // 	weather.getIpInfo(ip, function(cityinforeq
-    // 		var cityid = weather.getCityId(cityinfo[0], cityinfo[1]);
-    // 		weather.getWeatherInfo(cityid, function(weatherinfo){
-    // 			var weatherinfo = weatherinfo.weatherinfo;
-    // 			var html = "<html>" +
-    //                                          "<head>" +　
-    // 			           "<meta charset='utf-8'/>" +
-    //   					   "<title>天气</title>" +
-    // 				   "<style>*{font-family: arial, helvetica, sans-serif; font-size: 12px; color: rgb(153, 153, 153);}</style>" +
-    // 				   "</head>" +
-    // 				   "<body>" +
-    // 				   weatherinfo.city + ": " +
-    // 				   weatherinfo.temp2 + "~" + weatherinfo.temp1 + " " +
-    // 				   weatherinfo.weather +
-    // 				   " (更新时间: " + weatherinfo.ptime + ")" +
-    // 				   "</body>" +
-    // 				   "</html>";
-    // 			res.writeHead(200, {"Content-Type": "text/html"});
-    // 			res.write(html);
-    // 			res.end();
-    // 		});
-    // 	});
-    // }
     console.log(ip);
 });
 

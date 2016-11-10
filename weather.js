@@ -46,8 +46,8 @@ var getCityId = function(country, city) {
  * 获取天气数据.
  * 苏州: adcode 320500
  */
-var getWeatherInfo = function(cityid, callback) {
-    http.get("http://restapi.amap.com/v3/weather/weatherInfo?key="+process.env.GODE_CLOTHES_KEY+"&city=" + cityid + "&extensions=all&output=JSON", function(res) {
+var getWeatherInfo = function(cityid, checktype , callback) {
+    http.get("http://restapi.amap.com/v3/weather/weatherInfo?key="+process.env.GODE_CLOTHES_KEY+"&city=" + cityid + "&extensions="+checktype+"&output=JSON", function(res) {
         res.on("data", function(data) {
             data = JSON.parse(data);
             callback(data);
