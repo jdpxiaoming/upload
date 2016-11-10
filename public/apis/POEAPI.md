@@ -3,47 +3,47 @@
 ## 数据库结构
 * 单品
 
-图片|分类|颜色|标签|季节|收纳位置|价格|Create At
--|-|-|-|-|-|-|
-file|上衣|黄色|小清新/萝莉|春秋|主卧-上衣柜|30+20 = 50|2016/11/10
+|图片|分类|颜色|标签|季节|收纳位置|价格|Create At|
+|-|-|-|-|-|-|-|
+|file|上衣|黄色|小清新/萝莉|春秋|主卧-上衣柜|30+20 = 50|2016/11/10|
 
 * 套装
 
-上衣(单品ｉｄ)|底裤(单品id)|评分|全身图片|温度|季节|
--|-|-|-|-|-|
-oxs098348|iso23401|9.5|fi48BB31le|14-21.5|秋
+|上衣(单品ｉｄ)|底裤(单品id)|评分|全身图片|温度|季节|
+|-|-|-|-|-|-|
+|oxs098348|iso23401|9.5|fi48BB31le|14-21.5|秋|
 
 * 分类(衣服品类)
 
-id|名称|type|icon
--|-|-|-
-1|上装|1|http://xx1.jpg
-2|裤子|2|http://xx2.jpg
-3|连衣裙|3|http://xx3.jpg
-4|开衫/针织衫|４|http://xx４.jpg
-５|外套|５|http://xx５.jpg
-6|鞋子|6|http://xx6.jpg
-７|内衣/睡衣|７|http://xx７.jpg
+|id|名称|type|icon
+|-|-|-|-|
+|1|上装|1|http://xx1.jpg|
+|2|裤子|2|http://xx2.jpg|
+|3|连衣裙|3|http://xx3.jpg|
+|4|开衫/针织衫|４|http://xx４.jpg|
+|５|外套|５|http://xx５.jpg|
+|6|鞋子|6|http://xx6.jpg|
+|７|内衣/睡衣|７|http://xx７.jpg|
 
 * 颜色(颜色对照表)
 
 * 图片()
 
-objectId|mime_Type|url|
--|-|-
-581aa0d7128fe10055aca746|application/octet-stream|http://ac-6FyQ37RB.clouddn.com/C0SLWDDrehRUueFvUkIjvF3WOosEWdWXPIzhwOSW
+|objectId|mime_Type|url|
+|-|-|-|
+|581aa0d7128fe10055aca746|application/octet-stream|http://ac-6FyQ37RB.clouddn.com/C0SLWDDrehRUueFvUkIjvF3WOosEWdWXPIzhwOSW|
 
 * 品牌(衣服品牌分类)
 
-id|名称|type|website
--|-|-|-
-1|Jack&Johnse|1|http://xx1.jpg
-2|Only|2|http://xx2.jpg
-3|JUGG|3|http://xx3.jpg
-4|Addidas|４|http://xx４.jpg
-５|Nike|５|http://xx５.jpg
-6|潮流前线|6|http://xx6.jpg
-７|MetersBanwei|７|http://xx７.jpg
+|id|名称|type|website|
+|-|-|-|-|
+|1|Jack&Johnse|1|http://xx1.jpg|
+|2|Only|2|http://xx2.jpg|
+|3|JUGG|3|http://xx3.jpg|
+|4|Addidas|４|http://xx４.jpg|
+|５|Nike|５|http://xx５.jpg|
+|6|潮流前线|6|http://xx6.jpg|
+|７|MetersBanwei|７|http://xx７.jpg|
 
 
  ## WebService API
