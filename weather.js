@@ -43,12 +43,11 @@ var getCityId = function(country, city) {
 }
 
 /**
- * 获取天气数据.  clothes_key	e30a4ce529722f7eb83bc8fc8e976a96
+ * 获取天气数据.
  * 苏州: adcode 320500
- * http://restapi.amap.com/v3/weather/weatherInfo?key=e30a4ce529722f7eb83bc8fc8e976a96&city=320500&extensions=all&output=JSON
  */
 var getWeatherInfo = function(cityid, callback) {
-    http.get("http://restapi.amap.com/v3/weather/weatherInfo?key=e30a4ce529722f7eb83bc8fc8e976a96&city=" + cityid + "&extensions=all&output=JSON", function(res) {
+    http.get("http://restapi.amap.com/v3/weather/weatherInfo?key="+process.env.GODE_CLOTHES_KEY+"&city=" + cityid + "&extensions=all&output=JSON", function(res) {
         res.on("data", function(data) {
             data = JSON.parse(data);
             callback(data);
