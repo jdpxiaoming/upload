@@ -9,21 +9,21 @@
 
 * 套装
 
-|上衣(单品ｉｄ)|   裤子    　|评分     |全身图片|温度|季节|
-|------------|------------|--------|-------|----|-------|
+|上衣(单品ｉｄ)|裤子       　|评分     |全身图片|温度|季节|
+|------------|------------|--------|-------|----|---|
 |oxs098348|iso23401|9.5|fi48BB31le|14-21.5|秋|
 
 * 分类(衣服品类)
 
 |id |名称 |type |icon |
 |---|----|-----|-----|
-|1|上装|1|http://xx1.jpg|
+|1  |上装 |1    |http://xx1.jpg|
 |2|裤子|2|http://xx2.jpg|
 |3|连衣裙|3|http://xx3.jpg|
 |4|开衫/针织衫|４|http://xx４.jpg|
-|５|外套|５|http://xx５.jpg|
+|5|外套|５|http://xx５.jpg|
 |6|鞋子|6|http://xx6.jpg|
-|７|内衣/睡衣|７|http://xx７.jpg|
+|7|内衣/睡衣|７|http://xx７.jpg|
 
 * 颜色(颜色对照表)
 
@@ -37,11 +37,9 @@
 |2|Only|2|http://xx2.jpg|
 |3|JUGG|3|http://xx3.jpg|
 |4|Addidas|４|http://xx４.jpg|
-|５|Nike|５|http://xx５.jpg|
+|5|Nike|５|http://xx５.jpg|
 |6|潮流前线|6|http://xx6.jpg|
-|７|MetersBanwei|７|http://xx７.jpg|
-
-
+|7|MetersBanwei|７|http://xx７.jpg|
 
 ## WebService API
 
