@@ -3,19 +3,9 @@
 ## 数据库结构
 * 单品
 
-|代码库|链接|
-|-|-|
-|MarkDown                              |[https://github.com/younghz/Markdown](https://github.com/younghz/Markdown "Markdown")|
-
-
-|代码库                              |链接                                |
-|:------------------------------------:|------------------------------------|
-|MarkDown                              |[https://github.com/younghz/Markdown](https://github.com/younghz/Markdown "Markdown")|
-|moos-young                            |[https://github.com/younghz/moos-young](https://github.com/younghz/moos-young "tianchi")|
-
 
 |图片|分类|颜色|标签|季节|收纳位置|价格|Create At|
-|-|-|-|-|-|-|-|
+|---|----|---|---|----|------|----|--------|
 |file|上衣|黄色|小清新/萝莉|春秋|主卧-上衣柜|50|2016/11/10|
 
 * 套装
@@ -27,8 +17,8 @@
 
 * 分类(衣服品类)
 
-|id|名称|type|icon
-|-|-|-|-|
+|id |名称 |type |icon |
+|---|----|-----|-----|
 |1|上装|1|http://xx1.jpg|
 |2|裤子|2|http://xx2.jpg|
 |3|连衣裙|3|http://xx3.jpg|
@@ -42,13 +32,13 @@
 * 图片()
 
 |objectId|mime_Type|url|
-|-|-|-|
+|--------|---------|---|
 |581aa0d7128fe10055aca746|application/octet-stream|http://ac-6FyQ37RB.clouddn.com/C0SLWDDrehRUueFvUkIjvF3WOosEWdWXPIzhwOSW|
 
 * 品牌(衣服品牌分类)
 
 |id|名称|type|website|
-|-|-|-|-|
+|--|----|----|------|
 |1|Jack&Johnse|1|http://xx1.jpg|
 |2|Only|2|http://xx2.jpg|
 |3|JUGG|3|http://xx3.jpg|
@@ -56,7 +46,6 @@
 |５|Nike|５|http://xx５.jpg|
 |6|潮流前线|6|http://xx6.jpg|
 |７|MetersBanwei|７|http://xx７.jpg|
-
 
  ## WebService API
 
