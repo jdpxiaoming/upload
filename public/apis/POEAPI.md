@@ -2,9 +2,17 @@
 明确电子衣橱的ＷebService各个功能点以及表设计结构.
 ## 数据库结构
 * 单品
+
 |代码库|链接|
 |-|-|
 |MarkDown                              |[https://github.com/younghz/Markdown](https://github.com/younghz/Markdown "Markdown")|
+
+
+|代码库                              |链接                                |
+|:------------------------------------:|------------------------------------|
+|MarkDown                              |[https://github.com/younghz/Markdown](https://github.com/younghz/Markdown "Markdown")|
+|moos-young                            |[https://github.com/younghz/moos-young](https://github.com/younghz/moos-young "tianchi")|
+
 
 |图片|分类|颜色|标签|季节|收纳位置|价格|Create At|
 |-|-|-|-|-|-|-|
@@ -12,8 +20,9 @@
 
 * 套装
 
-|上衣(单品ｉｄ)|底裤(单品id)|评分|全身图片|温度|季节|
-|-|-|-|-|-|-|
+
+|上衣(单品ｉｄ)|   裤子    　|评分     |全身图片|温度|季节|
+|------------|------------|--------|-------|----|-------|
 |oxs098348|iso23401|9.5|fi48BB31le|14-21.5|秋|
 
 * 分类(衣服品类)
