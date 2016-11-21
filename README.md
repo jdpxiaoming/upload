@@ -1,58 +1,63 @@
-# Node.js Getting started
+# 电子衣橱API
+明确电子衣橱的ＷebService各个功能点以及表设计结构.
+## 数据库结构
+* 单品
 
-一个简单的使用 Express 4 的 Node.js 应用。
-可以运行在 LeanEngine Node.js 运行时环境。
+|图片|分类|颜色|标签|季节|收纳位置|价格|Create At|
+|---|----|---|---|----|------|----|--------|
+|file|上衣|黄色|小清新/萝莉|春秋|主卧-上衣柜|50|2016/11/10|
 
-## 一键部署
-[![Deploy to LeanEngine](http://ac-32vx10b9.clouddn.com/109bd02ee9f5875a.png)](https://leancloud.cn/1.1/functions/_ops/deploy-button)
+* 套装
 
-## 本地运行
+|上衣(单品ｉｄ)|裤子       　|评分     |全身图片   |温度    |季节|
+|------------|------------|--------|----------|-------|---|
+|oxs098348   |iso23401    |9.5     |fi48BB31le|14-21.5|秋  |
 
-首先确认本机已经安装 [Node.js](http://nodejs.org/) 运行环境和 [LeanCloud 命令行工具](https://www.leancloud.cn/docs/leanengine_cli.html)，然后执行下列指令：
+* 分类(衣服品类)
 
-```
-$ git clone git@github.com:leancloud/node-js-getting-started.git
-$ cd node-js-getting-started
-```
+|id |名称 |type |icon |
+|---|----|-----|-----|
+|1  |上装 |1    |http://xx1.jpg|
+|2|裤子|2|http://xx2.jpg|
+|3|连衣裙|3|http://xx3.jpg|
+|4|开衫/针织衫|４|http://xx４.jpg|
+|5|外套|５|http://xx５.jpg|
+|6|鞋子|6|http://xx6.jpg|
+|7|内衣/睡衣|７|http://xx７.jpg|
 
-安装依赖：
+* 颜色(颜色对照表)
 
-```
-npm install
-```
+* 图片()
 
-关联应用：
+* 品牌(衣服品牌分类)
 
-```
-lean app add origin <appId>
-```
+|id |名称        |type |website |
+|---|-----------|-----|---------|
+|1  |Jack&Johnse|1|http://xx1.jpg|
+|2|Only|2|http://xx2.jpg|
+|3|JUGG|3|http://xx3.jpg|
+|4|Addidas|４|http://xx４.jpg|
+|5|Nike|５|http://xx５.jpg|
+|6|潮流前线|6|http://xx6.jpg|
+|7|MetersBanwei|７|http://xx７.jpg|
 
-这里的 appId 填上你在 LeanCloud 上创建的某一应用的 appId 即可。origin 则有点像 Git 里的 remote 名称。
+## WebService API
 
-启动项目：
+ 1. 获取天气预报 /getWeather    [x]
 
-```
-lean up
-```
 
-应用即可启动运行：[localhost:3000](http://localhost:3000)
+ 2. 插入图片（支持七牛云存储）
 
-## 部署到 LeanEngine
+ 3. 单品上传
 
-部署到预备环境（若无预备环境则直接部署到生产环境）：
-```
-lean deploy
-```
+ 4. 用户登录/注册/修改密码
 
-将预备环境的代码发布到生产环境：
-```
-lean publish
-```
+ 5. 获取单品列表(分类查询)
 
-## 相关文档
+ 6. 获取历史套装记录
 
-* [LeanEngine 指南](https://leancloud.cn/docs/leanengine_guide-node.html)
-* [JavaScript 指南](https://leancloud.cn/docs/js_guide.html)
-* [JavaScript SDK API](https://leancloud.cn/api-docs/javascript/index.html)
-* [命令行工具详解](https://leancloud.cn/docs/cloud_code_commandline.html)
-* [LeanEngine FAQ](https://leancloud.cn/docs/cloud_code_faq.html)
+ 7. 获取衣服分类Category^
+
+ 8. 获取品牌分类
+
+ 9. 获取所有的历史搭配套装信息
