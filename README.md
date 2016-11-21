@@ -43,21 +43,9 @@
 
 ## WebService API
 
- 1. 获取天气预报 /getWeather    [x]
+ 1. 获取天气预报 [/getWeather](http://poe.leanapp.cn/getWeather?type=all)    询类型　base 实时　all 一周天气预测[x]
 
 
- 2. 插入图片（支持七牛云存储）
+ 2. 插入穿衣记录 [saveWear](http://poe.leanapp.cn/saveWear?score=9.6&weather='10°~20°'&image=)
 
- 3. 单品上传
-
- 4. 用户登录/注册/修改密码
-
- 5. 获取单品列表(分类查询)
-
- 6. 获取历史套装记录
-
- 7. 获取衣服分类Category^
-
- 8. 获取品牌分类
-
- 9. 获取所有的历史搭配套装信息
+ 3. 获取历史套装记录
