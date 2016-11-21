@@ -79,9 +79,15 @@ app.get('/saveWear',function(req , res ){
   wear.save().then(function(wear){
     //success
     console.log("save wave success ! ");
+    res.writeHead(200, {
+        "Content-Type": "text/html;charset:utf-8"
+    });
+    res.write(JSON.stringify(wear.toString()));
+    res.end();
   },function(error){
     //some error occur .
-    console.log("save wave failed #$$$$@@@@@----^^^^^^ ! ")
+    console.log("save wave failed #$$$$@@@@@----^^^^^^ ! ");
+    res.write('error @');
   });
 });
 // 可以将一类的路由单独保存在一个文件中
