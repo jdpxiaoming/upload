@@ -36,6 +36,7 @@ app.get('/', function(req, res) {
 });
 
 /**
+* get the weather info .
 * @type 查询类型　base 实时　all 一周天气预测
 **/
 app.get('/getWeather', function(req, res) {
@@ -58,7 +59,31 @@ app.get('/getWeather', function(req, res) {
     });
     console.log(ip);
 });
+// TODO: insert an product
+/**
+@image 照片
+@score 评分： 0 - 10分
+@weather 天气温度+ 0°~ 20°
+**/
+app.get('/saveWear',function(req , res ){
+  var score = req.query.score;
+  var weather = req.query.weather;
+  var image = req.query.image;
 
+  var Wear = AV.Object.extend('wears');
+  var wear = new Wear();
+  wear.set('image',image);
+  wear.set('score',score);
+  wear.set('weather',weather);
+
+  wear.save().then(function(wear){
+    //success
+    console.log("save wave success ! ");
+  },function(error){
+    //some error occur .
+    console.log("save wave failed #$$$$@@@@@----^^^^^^ ! ")
+  });
+});
 // 可以将一类的路由单独保存在一个文件中
 app.use('/todos', todos);
 
