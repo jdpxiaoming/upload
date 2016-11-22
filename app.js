@@ -74,8 +74,8 @@ app.get('/saveWear',function(req , res ){
   }
 
   var Wear = AV.Object.extend('wears');
-  // var AVFile = AV.Object.extend('');
- 
+  var AVFile = AV.Object.extend('AVFile');
+
   var wear = new Wear();
   wear.set('image',new AVFile('ProductPic',image);
   wear.set('score',score);
