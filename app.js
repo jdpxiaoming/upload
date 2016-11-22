@@ -69,10 +69,15 @@ app.get('/saveWear',function(req , res ){
   var score = req.query.score;
   var weather = req.query.weather;
   var image = req.query.image;
+  if(!image){
+    image = '';
+  }
 
   var Wear = AV.Object.extend('wears');
+  // var AVFile = AV.Object.extend('');
+ 
   var wear = new Wear();
-  wear.set('image',image);
+  wear.set('image',new AVFile('ProductPic',image);
   wear.set('score',score);
   wear.set('weather',weather);
 
