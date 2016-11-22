@@ -77,7 +77,7 @@ app.get('/saveWear',function(req , res ){
   var AVFile = AV.Object.extend('_File');
 
   var wear = new Wear();
-  wear.set('image',new AVFile('ProductPic',image);
+  wear.set('image',new AV.File('ProductPic',image);
   wear.set('score',score);
   wear.set('weather',weather);
 
@@ -93,6 +93,7 @@ app.get('/saveWear',function(req , res ){
     //some error occur .
     console.log("save wave failed #$$$$@@@@@----^^^^^^ ! ");
     res.write('error @');
+    res.end();
   });
 });
 // 可以将一类的路由单独保存在一个文件中
